@@ -73,7 +73,7 @@ public class Logica {
 		try {
 			demasiadosElementos();
 		}catch(NoMasPersonajes e) {
-			e.getMessage();
+			System.out.println(e.getMessage());
 		}
 	}
 }
