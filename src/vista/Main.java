@@ -30,13 +30,14 @@ public class Main extends PApplet {
 		logica.pintarPersonajes();
 		logica.moverPersonaje();
 		logica.pintarIzquierda();
-		logica.noAgregarMas();
+		
 		
 	}
 	
 	public void mousePressed() {
 		logica.crearPersonaje();
 		logica.aLaIzquierda();
+		logica.noAgregarMas();
 	}
 
 }
