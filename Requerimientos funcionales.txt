@@ -1,0 +1,37 @@
+Sofía Hormaza
+Requerimientos funcionales
+R1: Creación de personajes
+Resumen: Al dar click en un botón se deberá crear un personaje en el lienzo
+R2: Movimiento de personaje
+Resumen: Al crear el personaje este se comienza a mover de forma horizontal
+R3: Posición del personaje en movimiento
+Resumen: El personaje en movimiento se deberá mover en el 80% del lienzo
+R4: Edad personaje
+Resumen: Cada personaje debe tener un atributo edad
+R5: Numero de la suerte del personaje
+Resumen: Cada personaje debe tener un atributo número de la suerte
+R6: Acomodar de forma vertical
+Resumen: Al presionar un personaje este se agrega en la parte vertical del lienzo (en el 20% restante)
+R7: Cambio de imagen
+Resumen: Al agregar el personaje a la parte de la izquierda este deberá cambiar su imagen
+R8: Acomodar personajes
+Resumen: Los personajes deben acomodarse uno tras otro alineados
+R9: Número de elementos
+Resumen: Se permiten crear máximo 4 elementos en la parte izquierda
+R10: Mensaje de error
+Resumen: Si se intenta crear más de 4 personajes a la parte izquierda aparecerá un mensaje de error
+R11: Ordenar por edad
+Resumen: Al hundir un botón deberán ordenarse los personajes por edad
+R12: Ordenar por número de la suerte
+Resumen: Al hundir un botón deberán ordenarse los personajes por número de la suerte
+
+
+
+
+
+
+
+
+
+
+
