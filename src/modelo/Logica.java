@@ -9,6 +9,7 @@ public class Logica {
 	PApplet app;
 	LinkedList <Personaje> homeros;
 	LinkedList<Personaje> izquierda;
+	boolean error1=false;
 	public Logica(PApplet app) {
 		this.app=app;
 		
@@ -45,26 +46,31 @@ public class Logica {
 	
 	public void pintarIzquierda() {
 		for (int i = 0; i < izquierda.size(); i++) {
-			izquierda.get(i).setPosX(50);
-			izquierda.get(i).setPosY(20+i*100);
-			izquierda.get(i).setLink("simpson/lisa_simpson.png");
-			izquierda.get(i).pintar();
-			
+			if(error1==false) {
+				izquierda.get(i).setPosX(50);
+				izquierda.get(i).setPosY(20+i*100);
+				izquierda.get(i).setLink("simpson/lisa_simpson.png");
+				izquierda.get(i).pintar();
+			}
+	
 		}
 	}
 	
 	public void aLaIzquierda() {
 			for (int j = 0; j < homeros.size(); j++) {
-				if(app.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=70) {
-					izquierda.add(homeros.get(j));
-					System.out.println(izquierda.size());
+				if(error1==false) {
+					if(app.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=70) {
+						izquierda.add(homeros.get(j));
+						System.out.println(izquierda.size());
+					}
 				}
+				
 			}
 	}
 	
 	
 	public void demasiadosElementos() throws NoMasPersonajes{
-		if(izquierda.size()>=4) {
+		if(izquierda.size()>=5) {
 			throw new NoMasPersonajes("No se pueden crear más de 4 personajes");
 		}
 	}
@@ -73,6 +79,7 @@ public class Logica {
 		try {
 			demasiadosElementos();
 		}catch(NoMasPersonajes e) {
+			error1=true;
 			System.out.println(e.getMessage());
 		}
 	}
