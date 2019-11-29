@@ -26,7 +26,7 @@ public class Logica {
 	public void crearPersonaje() {
 		if(app.mouseX>=500 &&app.mouseX<=600&&app.mouseY>=550&&app.mouseY<=580) {
 			homeros.add(new Personaje((int)app.random(0,100),(int)app.random(0,100),
-					app,(int)app.random(250,699),(int)app.random(0,500),"homero_simpson.png"));
+					app,(int)app.random(250,699),(int)app.random(0,570),"simpson/homero_simpson.png"));
 		}
 		
 	}
@@ -45,15 +45,17 @@ public class Logica {
 	
 	public void pintarIzquierda() {
 		for (int i = 0; i < izquierda.size(); i++) {
-			izquierda.get(i).pintar();
 			izquierda.get(i).setPosX(50);
 			izquierda.get(i).setPosY(20+i*100);
+			izquierda.get(i).setLink("simpson/lisa_simpson.png");
+			izquierda.get(i).pintar();
+			
 		}
 	}
 	
 	public void aLaIzquierda() {
 			for (int j = 0; j < homeros.size(); j++) {
-				if(app.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=200) {
+				if(app.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=70) {
 					izquierda.add(homeros.get(j));
 					System.out.println(izquierda.size());
 				}

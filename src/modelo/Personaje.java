@@ -20,7 +20,7 @@ public class Personaje implements Runnable {
 		this.posX=posX;
 		this.posY=posY;
 		this.app=app;
-		img=app.loadImage("simpson/homero_simpson.png");
+		img=app.loadImage(link);
 		
 	}
 	
@@ -77,6 +77,14 @@ public class Personaje implements Runnable {
 
 	public void setNumSuerte(int numSuerte) {
 		this.numSuerte = numSuerte;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
 	}
 	
 	
