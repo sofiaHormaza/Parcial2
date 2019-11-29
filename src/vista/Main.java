@@ -29,6 +29,7 @@ public class Main extends PApplet {
 		logica.crearBoton();
 		logica.pintarPersonajes();
 		logica.moverPersonaje();
+		logica.pintarIzquierda();
 		
 	}
 	
