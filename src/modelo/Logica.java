@@ -8,10 +8,12 @@ public class Logica {
 	
 	PApplet app;
 	LinkedList <Personaje> homeros;
+	LinkedList<Personaje> izquierda;
 	public Logica(PApplet app) {
 		this.app=app;
 		
 		homeros=new LinkedList<Personaje>();
+		izquierda=new LinkedList<Personaje>();
 	}
 	
 	public void crearBoton() {
@@ -38,6 +40,32 @@ public class Logica {
 	public void moverPersonaje() {
 		for (int i = 0; i < homeros.size(); i++) {
 			new Thread(homeros.get(i)).start();
+		}
+	}
+	
+	public void aLaIzquierda() {
+		for (int i = 0; i < izquierda.size(); i++) {
+			for (int j = 0; j < homeros.size(); j++) {
+				if(PApplet.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=70) {
+					izquierda.add(homeros.get(j));
+					izquierda.get(i).setPosX(50);
+					System.out.println("hola");
+				}
+			}
+		}
+	}
+	
+	public void demasiadosElementos() throws NoMasPersonajes{
+		if(izquierda.size()>=4) {
+			throw new NoMasPersonajes("No se pueden crear más de 4 personajes");
+		}
+	}
+	
+	public void noAgregarMas() {
+		try {
+			demasiadosElementos();
+		}catch(NoMasPersonajes e) {
+			e.getMessage();
 		}
 	}
 }

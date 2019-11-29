@@ -26,6 +26,10 @@ public class Personaje implements Runnable {
 	
 	public void pintar() {
 		app.image(img, posX, posY,70,70);
+		app.fill(0);
+		app.text(edad,posX,posY);
+		app.text(numSuerte,posX,posY);
+		app.fill(255,255,0);
 	}
 	
 	public void mover() {
@@ -46,5 +50,39 @@ public class Personaje implements Runnable {
 			e.printStackTrace();
 		}
 	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public int getNumSuerte() {
+		return numSuerte;
+	}
+
+	public void setNumSuerte(int numSuerte) {
+		this.numSuerte = numSuerte;
+	}
+	
+	
 	
 }

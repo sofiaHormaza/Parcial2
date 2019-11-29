@@ -7,7 +7,6 @@ import processing.core.PImage;
 public class Main extends PApplet {
 	
 	Logica logica;
-	PImage imag;
 
 	public static void main(String[] args) {
 		PApplet.main("vista.Main");
@@ -30,10 +29,12 @@ public class Main extends PApplet {
 		logica.crearBoton();
 		logica.pintarPersonajes();
 		logica.moverPersonaje();
+		
 	}
 	
 	public void mousePressed() {
 		logica.crearPersonaje();
+		logica.aLaIzquierda();
 	}
 
 }
