@@ -1,5 +1,5 @@
 package modelo;
 
-public class CompararPorEdad {
+public class CompararPorEdad{
 
 }

@@ -46,7 +46,7 @@ public class Logica {
 	public void aLaIzquierda() {
 		for (int i = 0; i < izquierda.size(); i++) {
 			for (int j = 0; j < homeros.size(); j++) {
-				if(PApplet.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=70) {
+				if(PApplet.dist(homeros.get(j).getPosX(), homeros.get(j).getPosY(), app.mouseX, app.mouseY)<=200) {
 					izquierda.add(homeros.get(j));
 					izquierda.get(i).setPosX(50);
 					System.out.println("hola");
