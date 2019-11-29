@@ -26,10 +26,6 @@ public class Personaje implements Runnable {
 	
 	public void pintar() {
 		app.image(img, posX, posY,70,70);
-		app.fill(0);
-		app.text(edad,posX,posY);
-		app.text(numSuerte,posX,posY);
-		app.fill(255,255,0);
 	}
 	
 	public void mover() {
